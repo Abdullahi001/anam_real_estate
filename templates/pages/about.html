@@ -42,21 +42,7 @@
             neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
             commodi id libero eveniet harum perferendis laborum molestias quia.</p>
         </div>
-        <div class="col-md-4">
-          {% if listings %}
-            {% for listing in listings %}
-            <div class="card">
-                <img class="card-img-top" src="{{ listing.realtor_photo.url }}" alt="Seller of the month">
-                <div class="card-body">
-                  <h5 class="card-title">Seller Of The Month</h5>
-                  <h6 class="text-secondary">{{ listing.realtor_name }}</h6>
-                  <p class="card-text">{{ listing.realtor_description }}
-                  </p>
-                </div>
-              </div>
-            {% endfor %}
-          {% endif %}
-        </div>
+       
       </div>
     </div>
   </section>
