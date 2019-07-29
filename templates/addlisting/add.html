@@ -3,14 +3,19 @@
 {% block title %} | create {% endblock %}
 
 {% block content %}
-<form action="{% url 'add' %}" method = 'post' 
-enctype="multipart/form-data">
-  {% csrf_token %}
- 
-  {{ form.as_p }}
-
-  
-   <input type="submit" value="add">
- </form>
+<div class="container bg-info" >
+  <div class="col-md-6">
+      <form action="{% url 'add' %}" method = 'post'   enctype="multipart/form-data">
+            {% csrf_token %}
+          
+            {{ form.as_p }}
+    
+            
+            <input type="submit" class="btn btn-success" value="add">
+      </form>
+    
+     
+  </div>
+</div>
 
 {% endblock %}

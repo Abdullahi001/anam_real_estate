@@ -2,7 +2,7 @@ from django import forms
 from .models import Listing
 
 class ListingForm(forms.ModelForm):
-    class Meta:
+    class Meta(object):
         model = Listing
         fields = [
             'title',
@@ -27,6 +27,72 @@ class ListingForm(forms.ModelForm):
             'realtor_phone',
             'realtor_email',
         ]
-
+        widgets = {
+        'title': forms.TextInput(
+            attrs={
+                'class': 'form-control'
+                }
+            ),
+        'address': forms.TextInput(
+            attrs={
+                'class': 'form-control'
+                }
+            ),
+        'city': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'state': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'description': forms.Textarea(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'price': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'bedrooms': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'bathrooms': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'garage': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'realtor_name': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'realtor_description': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'realtor_phone': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        'realtor_email': forms.TextInput(
+        attrs={
+            'class': 'form-control'
+            }
+        ),
+        }
 
 

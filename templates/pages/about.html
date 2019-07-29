@@ -9,8 +9,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">About ANAM Real Estate</h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <h1 class="display-4 text-dark">About ANAM Real Estate</h1>
         </div>
       </div>
     </div>
@@ -35,22 +34,17 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <h2>We Search For The Perfect Home</h2>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <h2>About Us</h2>
           <img src="{% static 'img/about.jpg' %}" alt="">
-          <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-            neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-            commodi id libero eveniet harum perferendis laborum molestias quia.</p>
-        </div>
-       
+          <p class="mt-4">ANAM is a real estate advertising and marketing service company. It is our desire at ANAM to make it quick and easy for you to search and find real estate located all across Somalia through our advertised real estate agents’ web sites. ANAM can help you find providers of many of the services needed in a real estate transaction.</div>
       </div>
     </div>
   </section>
 
   <!-- Work -->
   <section id="work" class="bg-dark text-white text-center">
-    <h2 class="display-4">We Work For You</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+    <h2 class="display-4">We Made It Easy For You</h2>
+    <h4>Search through our listing housing quickly!</h4>
     <hr>
     <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
   </section>
@@ -60,25 +54,52 @@
     <div class="container">
       <h2 class="text-center">Our Team</h2>
       <div class="row text-center">
-        {% if listings %}
-          {% for listing in listings %}
-          <div class="col-md-4">
-              <img src="{{ listing.realtor_.url }}" alt="" class="rounded-circle mb-3">
-              <h4>{{ listing.realtor_name }}</h4>
+          <div class="col-md-3">
+              <img src="" alt="" class="rounded-circle mb-3">
+              <h4>Abdullahi</h4>
               <p class="text-success">
                 <i class="fas fa-award text-success mb-3"></i> Realtor</p>
               <hr>
               <p>
-                <i class="fas fa-phone"></i> {{ listing.realtor_phone }}</p>
+                <i class="fas fa-phone"></i> 6194266</p>
               <p>
-                <i class="fas fa-envelope-open"></i> {{ listing.realtor_email }}</p>
-            </div>
-          {% endfor %}
-        {% else %}
-          <div class="col-md-12">
-            <p>No Realtors Available</p>
+                <i class="fas fa-envelope-open"></i> abdullahimusa4991@gmail.com</p>
           </div>
-        {% endif %}       
+          <div class="col-md-3">
+              <img src="" alt="" class="rounded-circle mb-3">
+              <h4>Nimco</h4>
+              <p class="text-success">
+                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+              <hr>
+              <p>
+                <i class="fas fa-phone"></i> 6580800</p>
+              <p>
+                <i class="fas fa-envelope-open"></i> nimco@gmail.com</p>
+          </div>
+          <div class="col-md-3">
+              <img src="" alt="" class="rounded-circle mb-3">
+              <h4>axmed</h4>
+              <p class="text-success">
+                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+              <hr>
+              <p>
+                <i class="fas fa-phone"></i> 7708807</p>
+              <p>
+                <i class="fas fa-envelope-open"></i> ahmed@gmail.com</p>
+          </div>
+          <div class="col-md-3">
+              <img src="" alt="" class="rounded-circle mb-3">
+              <h4>Maxamed</h4>
+              <p class="text-success">
+                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+              <hr>
+              <p>
+                <i class="fas fa-phone"></i> 7380210</p>
+              <p>
+                <i class="fas fa-envelope-open"></i> maxamed@gmail.com</p>
+          </div>
+          
+          
       </div>
     </div>
   </section>
