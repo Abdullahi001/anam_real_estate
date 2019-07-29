@@ -18,11 +18,7 @@ def index(request):
 
 
 def about(request):
-    # Get all realtors
     listings = Listing.objects.all()
-
- 
-
     context = {
         'listings': listings,
     }
