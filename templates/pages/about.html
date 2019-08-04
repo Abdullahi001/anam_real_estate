@@ -54,50 +54,21 @@
     <div class="container">
       <h2 class="text-center">Our Team</h2>
       <div class="row text-center">
-          <div class="col-md-3">
-              <img src="" alt="" class="rounded-circle mb-3">
-              <h4>Abdullahi</h4>
+        {% for our in ourteam %}
+          <div class="col-md-4">
+              <img src="{{ our.photo.url }}" height="200px" alt="" class="rounded-circle mb-3">
+              <h4>{{ our.name }}</h4>
               <p class="text-success">
                 <i class="fas fa-award text-success mb-3"></i> Realtor</p>
               <hr>
               <p>
-                <i class="fas fa-phone"></i> 6194266</p>
+                <i class="fas fa-phone"></i> {{ our.number }} </p>
               <p>
-                <i class="fas fa-envelope-open"></i> abdullahimusa4991@gmail.com</p>
+                <i class="fas fa-envelope-open"></i> {{ our.email }}</p>
           </div>
-          <div class="col-md-3">
-              <img src="" alt="" class="rounded-circle mb-3">
-              <h4>Nimco</h4>
-              <p class="text-success">
-                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-              <hr>
-              <p>
-                <i class="fas fa-phone"></i> 6580800</p>
-              <p>
-                <i class="fas fa-envelope-open"></i> nimco@gmail.com</p>
-          </div>
-          <div class="col-md-3">
-              <img src="" alt="" class="rounded-circle mb-3">
-              <h4>axmed</h4>
-              <p class="text-success">
-                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-              <hr>
-              <p>
-                <i class="fas fa-phone"></i> 7708807</p>
-              <p>
-                <i class="fas fa-envelope-open"></i> ahmed@gmail.com</p>
-          </div>
-          <div class="col-md-3">
-              <img src="" alt="" class="rounded-circle mb-3">
-              <h4>Maxamed</h4>
-              <p class="text-success">
-                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-              <hr>
-              <p>
-                <i class="fas fa-phone"></i> 7380210</p>
-              <p>
-                <i class="fas fa-envelope-open"></i> maxamed@gmail.com</p>
-          </div>
+        {% endfor %}
+          
+         
           
           
       </div>

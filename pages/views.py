@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from listings.choices import price_choices, bedroom_choices, state_choices
+from ourteam.models import Ourteam
 
 from listings.models import Listing
 
@@ -19,7 +20,9 @@ def index(request):
 
 def about(request):
     listings = Listing.objects.all()
+    ourteam = Ourteam.objects.all()
     context = {
+        'ourteam' : ourteam,
         'listings': listings,
     }
 
