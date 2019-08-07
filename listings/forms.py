@@ -23,7 +23,6 @@ class ListingForm(forms.ModelForm):
             'photo_6',
             'realtor_name',
             'realtor_photo',
-            'realtor_description',
             'realtor_phone',
             'realtor_email',
         ]
