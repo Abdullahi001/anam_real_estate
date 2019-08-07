@@ -1,5 +1,3 @@
-import django_heroku
-import dj_database_url
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -13,9 +11,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3%vzb+-1g@(r9e-vkt9g=xlw5uf7f*b2c0dr5wdj!59s-1$d$k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['127.0.0.1', 'abdullahidev.herokuapp.com']
+DEBUG = True
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -78,9 +75,6 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -134,8 +128,3 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
-django_heroku.settings(locals())
