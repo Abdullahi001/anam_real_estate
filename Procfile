@@ -1,1 +1,1 @@
-web: gunicorn anam.wsgi
+web: gunicorn anam.wsgi --log-file -

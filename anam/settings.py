@@ -13,7 +13,7 @@ SECRET_KEY = '3%vzb+-1g@(r9e-vkt9g=xlw5uf7f*b2c0dr5wdj!59s-1$d$k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['abdullahidev.herokuapp.com']
 
 # Application definition
 
@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -119,6 +120,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'anam/static')
 ]
 
+#  Add configuration for static files storage using whitenoise
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 # Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -129,4 +133,6 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
-django_heroku.settings(locals())
+import dj_database_url 
+anam2019  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(anam2019)
